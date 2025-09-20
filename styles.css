@@ -17,4 +17,14 @@ video {
     transform: translate(-50%, -50%);
     object-fit: cover;
     z-index: -100;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
 }
+
+@media screen and (max-width: 768px) {
+    video {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
