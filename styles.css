@@ -10,32 +10,13 @@ body {
 
 video {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
     z-index: -100;
-    -webkit-transform: none;
-    transform: none;
-    display: grid;
-    grid-template-columns: 
-        repeat(
-            auto-fit,
-            minmax(150px, 1fr)
-        );
-}
-
-@media screen and (orientation: portrait) {
-    video {
-    width: 100vw;
-        height: 100vh;
-    }
-}
-
-@media screen and (orientation: landscape) {
-    video {
-        width: 100vw;
-        height: 100vh;
-    }
+    transform: translate(-50%, -50%);
+    object-fit: contain; /* Esta es la propiedad que necesitas */
 }
